@@ -7,8 +7,10 @@ See the live project: (https://shopnext-ecommerce-seo-assignment.vercel.app)
 
 ## Quick Start
 
+```
 npm install
 npm run dev
+```
 
 # SEO Implementation
 
