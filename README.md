@@ -3,15 +3,13 @@
 A production‑ready, SEO‑first eCommerce store built with **Next.js**.  
 Uses the [DummyJSON](https://dummyjson.com) API for products and categories.
 
+See the live project: (https://shopnext-ecommerce-seo-assignment.vercel.app)
+
 ## Quick Start
 
 ```bash
 npm install
 npm run dev
-
----
-
-See the live project: https://shopnext-ecommerce-seo-assignment.vercel.app(https://shopnext-ecommerce-seo-assignment.vercel.app)
 
 ---
 
