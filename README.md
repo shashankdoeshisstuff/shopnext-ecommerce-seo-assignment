@@ -11,6 +11,10 @@ npm run dev
 
 ---
 
+See the live project: https://shopnext-ecommerce-seo-assignment.vercel.app(https://shopnext-ecommerce-seo-assignment.vercel.app)
+
+---
+
 ```markdown
 # SEO Implementation
 
