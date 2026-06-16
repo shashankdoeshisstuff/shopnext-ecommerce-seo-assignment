@@ -7,13 +7,9 @@ See the live project: (https://shopnext-ecommerce-seo-assignment.vercel.app)
 
 ## Quick Start
 
-```bash
 npm install
 npm run dev
 
----
-
-```markdown
 # SEO Implementation
 
 This project follows enterprise eCommerce SEO best practices.
