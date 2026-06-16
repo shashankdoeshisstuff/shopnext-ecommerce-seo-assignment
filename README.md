@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ShopNext – Premium eCommerce Store
 
-## Getting Started
+A production‑ready, SEO‑first eCommerce store built with **Next.js**.  
+Uses the [DummyJSON](https://dummyjson.com) API for products and categories.
 
-First, run the development server:
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```markdown
+# SEO Implementation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project follows enterprise eCommerce SEO best practices.
 
-## Learn More
+## 1. Dynamic Metadata
+Every page exports `generateMetadata()` with:
+- Unique title & description
+- Open Graph & Twitter Card tags
+- Canonical URL
+- Keywords
+- `robots` directives (e.g., `noindex` on empty search)
 
-To learn more about Next.js, take a look at the following resources:
+## 2. Structured Data (JSON‑LD)
+All schemas are injected server‑side via `<JsonLd />`:
+- **Organization** – brand panel
+- **WebSite** – search action
+- **Product** – price, availability, reviews
+- **BreadcrumbList** – breadcrumbs in SERPs
+- **CollectionPage** – category pages
+- **ItemList** – featured/related products & search results
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 3. Sitemap & Robots
+- `/sitemap.ts` – dynamically lists all product & category URLs
+- `/robots.ts` – allows Google/Bing, disallows API paths, points to sitemap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 4. Rendering Strategy
+- **Static Generation (SSG)** – pre‑built product/category pages via `generateStaticParams`
+- **Incremental Static Regeneration (ISR)** – `revalidate = 3600` keeps content fresh
+- **Server Components** – minimal client‑side JavaScript
 
-## Deploy on Vercel
+## 5. URL Structure
+- `/` – Home
+- `/store` – All products (filterable)
+- `/category/[slug]` – Category page
+- `/product/[id]` – Product detail
+- `/search?q=iphone` – Search results
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+URLs are clean, keyword‑rich, and canonical.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 6. On‑Page Optimisation
+- Semantic HTML5 (`<header>`, `<main>`, `<section>`, `<article>`, etc.)
+- Single `<h1>` per page, logical heading hierarchy
+- Breadcrumbs with schema on product/category/search pages
+- Internal linking: related products, category cards, footer links
+- Alt text on all product images
+
+## 7. Performance & Accessibility
+- `next/image` with `remotePatterns`, `priority`, and proper sizes
+- `next/font` with `display: swap` (Noto Sans + Noto Serif)
