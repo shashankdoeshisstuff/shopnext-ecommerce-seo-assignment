@@ -20,14 +20,14 @@ export default function SortSelect() {
 
   return (
     <div className="flex items-center gap-2">
-      <label htmlFor="sort-select" className="text-sm font-medium text-gray-700 whitespace-nowrap">
+      <label htmlFor="sort-select" className="text-sm font-medium text-neutral-700 whitespace-nowrap">
         Sort by:
       </label>
       <select
         id="sort-select"
         value={currentSort}
         onChange={handleChange}
-        className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="border border-neutral-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-neutral-500"
       >
         <option value="">Featured</option>
         <option value="price-asc">Price: Low to High</option>
