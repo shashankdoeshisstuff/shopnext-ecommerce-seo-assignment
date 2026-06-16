@@ -1,4 +1,4 @@
-# ShopNext – Premium eCommerce Store
+# ShopNext – eCommerce Store
 
 A production‑ready, SEO‑first eCommerce store built with **Next.js**.  
 Uses the [DummyJSON](https://dummyjson.com) API for products and categories.
